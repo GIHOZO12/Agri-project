@@ -25,8 +25,8 @@ if($password1 !=$password2){
 }
 else{
     try{
-        $sqlQery="SELECT email FROM user WHERE email=:email";
-        $statement = $db->prepare($sqlQery);
+        $sqlQuery="SELECT email FROM User WHERE email=:email";
+        $statement = $db->prepare($sqlQuery);
         $statement->execute(array(':email'=>$email));
 
         if($statement->rowCount() ==1){
@@ -97,7 +97,7 @@ else{
     <?php if(!empty($form_errors)) echo show_errors($form_errors); ?>
 
 
-    <form action="" method="post">
+    <form action="" method="POST">
 
     <label for=""> email</label><br>
     <input type="text" name="email"><br>

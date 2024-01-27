@@ -13,8 +13,8 @@ include_once 'session.php';?>
     <title>Document</title>
 </head>
 <body>
-    <h1>user AUthetication system</h1>
-    <hr>
+    <!-- <h1>user AUthetication system</h1> -->
+    <!-- <hr> -->
 <?php if(!isset($_SESSION['email'])):?>
 <P>you are currently not sign in <a href="login.php">Login</a> not yet a member ? <a href="signup.php">signup</a></P>
 <?php else:?>

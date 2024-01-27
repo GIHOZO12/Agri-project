@@ -1,0 +1,607 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500&display=swap');
+html{
+    scroll-behavior: smooth;
+}
+:root{
+    --bg--black-900: #f2f2fc;
+    --bg--black-100: #fdf9ff;
+    --bg-black-50: #e8dfec;
+    --text-black-900:#302e4d;
+    --text-black-700:#504e70;
+    --border-black-100:rgb(219, 229, 219);
+    --skin-color: rgb(5, 254, 5);
+}
+body.dark{
+    --bg--black-900: #000000;
+    --bg--black-100: #201e21;
+    --bg-black-50: #444045;
+    --text-black-900:#ffffff;
+    --text-black-700:#bababb;
+}
+body{
+    line-height: 1.5;
+    font-size: 16px;
+    font-family: 'poppins', sans-serif;
+    background:var(--bg--black-900);
+}
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+::before,::after{
+    box-sizing: border-box;
+}
+ul{
+    list-style: none;
+}
+.section{
+    background: var(--bg--black-900);
+    min-height: 100vh;
+    display: block;
+    padding: 0 30px;
+    z-index: 0;
+    opacity: 1;
+    
+}
+.hidden{
+    display: none !important;
+}
+.main-content{
+    padding-left: 270px;
+
+}
+.main-content .search input{
+    background: var(--border-black-100);
+    border-radius: 5PX;
+}
+.padd-15{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.padd-16{
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.container{
+    max-width: 1100px;
+    width: 100%;
+    margin: auto;
+    border: 2px solid var(--bg-black-50);
+    
+}
+.section .container{
+    padding-top: 60px;
+    padding-bottom: 70px;
+}
+.section-title{
+    flex: 0 0 100%;
+    margin-bottom: 60px;
+    max-width: 100%;
+
+}
+.section-title h2{
+    font-size: 25px;
+    color: var(--text-black-900);
+    font-weight: 700;
+    position: absolute;
+}
+
+
+.main-content .container .row .search{
+    
+    margin-top: 20px;
+    padding-bottom: 14px;
+    flex: 0 0 90%;
+    max-width: 90%;
+    
+}
+.main-content .container .row .search form{
+    border-radius: 5px;
+    display: flex;
+    background-color: var(--border-black-100);
+    border: 1px solid var(--text-black-700);
+    max-width: 900px;
+}
+.main-content .container .row .search form i{
+    margin-top: 20px;
+    font-size: 20px;
+    margin-right: 270px;
+}
+.main-content .container .row .search input{
+    width: 100%;
+    height: 50px;
+    font-size: 25px;
+}
+.section-title h2 i{
+    padding-right: 7px;
+    border-radius: 100%;
+    background: transparent;
+    padding-left: 8px;
+
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+    position: relative;
+}
+.btn{
+    font-size: 16px;
+    font-weight: 500;
+    padding: 7px 10px;
+    color : #fff;
+    display: inline-block;
+    white-space: nowrap;
+    background: rgb(118, 218, 118);
+    border-radius: 8px;
+    border: none;
+    
+}
+
+.shadow-dark{
+    box-shadow: 0 0 20px rgba(48, 46, 77, 0.25);
+}
+
+/* aside */
+.aside{
+    width: 270px;
+    background: var(--bg--black-100);
+    position: fixed;
+    left: 0;
+    top: 0;
+    border-right: 2px solid var(--bg-black-50);
+    padding: 30px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+.aside .logo{
+    position: absolute;
+    top: 30px;
+    font-size: 30px;
+    text-transform: capitalize;
+}
+.aside .logo a{
+    color: var(--text-black-900);
+    padding: 5px 10px;
+    font-weight: 700;
+    font-size: 30px;
+    letter-spacing: 1px;
+    position: relative;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+
+}
+.aside .logo a i{
+    color: var(--skin-color);
+}
+.aside .logo a::before{
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-bottom: 5px solid var(--skin-color);
+    border-left: 5px solid var(--skin-color);
+    bottom: 0;
+    left: 0;
+}
+.aside .logo a::after{
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-top: 5px solid var(--skin-color);
+    border-right: 5px solid var(--skin-color);
+    top: 0;
+    right: 0;
+}
+.aside .nav-toggler{
+    height: 40px;
+    width: 45px;
+    border: 2px solid var(--bg-black-50);
+    cursor: pointer;
+    position: fixed;
+    left: 300px;
+    top: 20px;
+    border-radius: 5px;
+    background: var(--bg--black-100);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    padding-left: 10px;
+}
+.aside .nav-toggler span{
+    height: 2px;
+    width: 18px;
+    background: var(--skin-color);
+    display: inline-block;
+    position: relative;
+}
+.aside .nav-toggler span::before{
+    content: '';
+    height: 2px;
+    width: 18px;
+    background: var(--skin-color);
+    position: absolute;
+    top: -6px;
+    left: 0;
+
+}
+.aside .nav-toggler span::after{
+    content: '';
+    height: 2px;
+    width: 18px;
+    background: var(--skin-color);
+    position: absolute;
+    top: 6px;
+    left: 0;
+
+}
+.aside .nav{
+    margin-top: 50px;
+    top: -50px;
+}
+.aside .nav li{
+    margin-bottom: 20px;
+    display: block;
+}
+.aside .nav li a{
+    font-size: 16px;
+    font-weight: 600;
+    display: block;
+    border-bottom: 2px solid var(--bg-black-50);
+    color: var(--text-black-900);
+    padding: 5px 15px;
+    transition: all .3s ease;
+}
+.aside .nav li a:hover{
+    color: var(--skin-color);
+    background: var(--text-black-900);
+}
+.aside .nav li a:hover:not(:active){
+    background: var(--text-black-700);
+}
+.aside .nav li a i{
+    padding-right: 25px;
+}
+
+
+/* home */
+
+
+
+
+
+/* User */
+
+
+.user .user-content{
+    background: var(--bg--black-100);
+    border: 1px solid var(--bg--black-100);
+    flex: 0 0 100%;
+    max-width: 100%;
+    border-bottom: 1px solid var(--border-black-100);
+ 
+}
+.user .user-content .user-text{
+    flex: 0 0 100%;
+    max-width: 100%;
+
+}
+
+.user .user-content .user-text p{
+    font-size: 16px;
+    line-height: 25px;
+    color: var(--text-black-700);
+}
+ .user .user-content .personal-info{
+    flex: 0 0 60%;
+    max-width: 60%;
+    margin-top: 40px;
+
+}
+.user .user-content .personal-info .info-item{
+    flex: 0 0 50%;
+    max-width: 100%;
+    
+}
+
+.user .user-content .personal-info .info-item p span{
+    font-weight: 400;
+    color: var(--text-black-700);
+    margin-left: 4px;
+    display: inline-block;
+}
+.user .user-content .personal-info .buttons{
+    margin-top: 30px;
+}
+.user .user-content .personal-info .btn{
+    margin-right: 15px;
+    margin-top: 10px;
+}
+.user .user-content .skills{
+    flex: 0 0 40%;
+    max-width: 40%;
+    margin-top: 40px;
+} 
+.user .user-content .skills .skills-item{
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 25px;
+   
+}
+
+.user .user-content .skills .skills-item .progress{
+    background: var(--bg-black-50);height: 7px;
+    border-radius: 4px;
+    width: 100%;
+    position: relative;
+}
+.user .user-content .skills .skills-item .progress .progress-in{
+    position: absolute;
+    left: 0;
+    top:0;
+    height: 100%;
+    border-radius: 4px;
+    background: var(--skin-color);
+    
+}
+.user .user-content .skills .skills-item .skills-percent{
+    position: absolute;
+    right: 0;
+    color: var(--text-black-900);
+    top: -40px;
+    font-weight: 400;
+    line-height: 40px;
+}
+.user .user-content .education{
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-top: 20px;
+}
+
+.user .user-content h3.title{
+    font-size: 24px;
+    margin-bottom: 30px;
+    font-weight: 700;
+    color: var(--text-black-900);
+}
+.user .user-content .timeline-box{
+    flex: 0 0 100%;
+    max-width: 100%;
+
+}
+.user .user-content .timeline{
+    color:  var(--text--black-100);
+    padding: 30px 15px;
+    border:1px solid var(--bg-black-50);
+    border-radius: 4px;
+    width: 100%;
+    position: relative;
+    height: 100px;
+    margin-top: 50px;
+
+
+}
+
+
+
+.user .user-content .thinking{
+    background-color: var(--bg-black-100);
+    margin-top: 50px;
+    flex: 0 0 100%;
+    max-width: 100%;
+    display: flex;
+    padding-bottom: 40px;
+}
+.user .user-content .thinking .like{
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+    padding-left: 5%;
+}
+.user .user-content .thinking .like i,
+.user .user-content .thinking .share i,
+.user .user-content .thinking .comment i{
+    padding-bottom: 15px;
+    font-size: 30px;
+    font-weight: 100;
+    
+}
+.user .user-content .thinking h3{
+    color: var(--text-black-700);
+    font-size: 15px;
+}
+.user .user-content .thinking .comment{
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+   
+}
+.user .user-content .thinking .share{
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+    right:0;
+}
+
+
+
+/* ========CONTACT====== */
+
+#contact{
+    display: none;
+}
+.contact-title{
+    color: var(--skin-color);
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+.contact-sub-title{
+    color: var(--text-black-900);
+    text-align: center;
+    font-size: 15px;
+    margin-bottom: 60px;
+}
+.contact .contact-info-item{
+    flex: 0 0 25%;
+    max-width: 25%;
+    text-align: center;
+    margin-bottom: 60PX;
+}
+.contact .contact-info-item .icon{
+    display: inline-block;
+}
+.contact .contact-info-item .icon .fa{
+    font-size: 25px;
+    color: var(--skin-color);
+
+}
+.contact .contact-info-item h4{
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text-black-900);
+    text-transform: capitalize;
+    margin: 25px 0 5px;
+}
+.contact .contact-info-item p{
+    font-size: 16px;
+    line-height: 25px;
+    color: var(--text-black-700);
+}
+.contact .contact-form{
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+.contact .contact-form .col-6{
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+}
+.contact .contact-form .col-12{
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+.contact .contact-form .form-item{
+    margin-bottom: 30px;
+}
+.contact .contact-form .form-item .form-control{
+    width: 100%;
+    height: 50px;
+    border-radius: 10px;
+    background: var(--bg--black-100);
+    border: 1px solid var(--bg-black-50);
+    padding: 10px 25px;
+    font-size: 16px;
+    color: var(--text-black-700);
+    transform: all .3s ease;
+}
+.contact .contact-form .form-item .form-control:focus{
+    box-shadow: 0 0 20px rgba(48, 46, 77, 0.20);
+}
+.contact .contact-form .form-item textarea.form-control{
+    height: 150px;
+    color:var(--text-black-900);
+    font-family: sans-serif;
+    font-size: 20px;
+}
+
+.reveal{
+    position: relative;
+    transform: translateY(250px);
+    opacity: 0;
+    transition: all 0.8s ease;
+}
+.reveal.active{
+  transform: translateY(0px);
+   opacity: 2; 
+
+}
+
+
+
+/* responsive */
+
+
+@media (max-width:1199px){
+
+    .aside{
+        left: -270px;
+        transition: all 0.3s ease;
+    }
+    .aside.open{
+        left: 0;
+        transition: all 0.3s ease;
+    }
+    
+    .aside .nav-toggler{
+        display: block;
+        margin-left: 0;
+        left: 5px;
+    }
+    .aside .nav-toggler.open{
+        margin-left: -270px;
+    }
+    .main-content{
+        padding: 0;
+    }
+    .main-content.open{
+        
+        transition: all 0.3s ease;
+        
+    }
+    .about .about-content .personal-info .info-item p span{
+        display: block;
+        margin-left: 0;
+    }
+}
+@media (max-width:991px){
+    .contact .contact-info-item,
+    .protofolio .protofolio-item,
+    .service .service-item{
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+    .home .home-info{
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .home .home-img{
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-top: 20px;
+    }
+    .main-content .container .row .search{
+        flex: 0 0 80%;
+        max-width: 80%;
+    
+    }
+    .padd-16{
+        padding-left: 110px;
+        padding-right: 110px;
+    }
+    
+    
+}
+@media (max-width:767px){
+    .contact .contact-form .col-6,
+    .contact .contact-info-item,
+    .protofolio .protofolio-item,
+    .service .service-item,
+    .about .about-content .education,
+    .about .about-content .experience,
+    .about .about-content .skills,
+    .about .about-content .personal-info{
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    
+}
+@media (max-width:400px){
+    .home .home-img{
+        width: 70%;
+    }
+}
+

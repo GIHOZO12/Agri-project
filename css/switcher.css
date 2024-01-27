@@ -1,0 +1,44 @@
+.user-account{
+    position: absolute;
+    right: 10px;
+    top: 20px;
+    padding: 5px;
+    width: 200px;
+    border: 1px solid var(--bg-black-50);
+    background: var(--bg-black-100);
+    z-index: 101;
+    border-radius: 5px;
+ 
+}
+
+.user-account .s-icon{
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    font-size: 20px;
+    background: transparent;
+    color: var(--text-black-900);
+    right: 10%;
+    border: 1px solid rgb(0, 255, 0);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 50%;
+    color: var(--bg-black-100);
+
+}
+.user-account .settings i{
+    position: absolute;
+    right: 1%;
+    margin-top: 5%;
+    font-size: 25px;
+    color: var(--text-black-700);
+
+}
+.user-account .s-icon i{
+    line-height: 40px;
+    color: var(--text-black-900);
+}
+
+
+
