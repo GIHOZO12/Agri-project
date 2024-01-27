@@ -26,7 +26,7 @@ if( isset($_POST['loginBtn'])){
     if(password_verify($password,$hashed_password)){
         $_SESSION['id']=$id;
         $_SESSION['email']=$email;
-        header("location:home.php");
+        header("location:index.html");
     }
     else{
         $result="<p style='margin:20px;color:red;text-align:center;'>invalid email or password</p>";
